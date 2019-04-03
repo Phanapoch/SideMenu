@@ -424,10 +424,10 @@ extension SideMenuTransition: UIViewControllerAnimatedTransitioning {
             
             // add the both views to our view controller
             switch sideMenuManager.menuPresentMode {
-            case .viewSlideOut, .viewSlideInOut:
+            case .viewSlideOut:
                 container.addSubview(menuView)
                 container.addSubview(topView)
-            case .menuSlideIn, .menuDissolveIn:
+            case .menuSlideIn, .menuDissolveIn, .viewSlideInOut:
                 container.addSubview(topView)
                 container.addSubview(menuView)
             }
